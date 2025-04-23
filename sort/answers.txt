@@ -1,0 +1,19 @@
+sort1 uses:
+Bubble sort
+How do you know?:
+sorted5000 took it 0.018 seconds
+First of all it take the most time to sort. the reversed sort took it the more time then the random one.
+Secondly. when sorted, the omega is quicker.
+
+sort2 uses:
+Merge sort
+How do you know?:
+random5000 reversed5000 sorted5000 took it less time 0.018 seconds to sort.
+This was the easiest to find. Takes less time to sort with almost no time diffence between the random/reversed/sorted.
+By sorting into smallest arrays it shouldn't metter how unsorted they were.
+
+sort3 uses:
+Selection sort
+How do you know?:
+
+In the random sort it takes it more time than the reversed sort, which means the reversed is easier(quicker) for the selection.

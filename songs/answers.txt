@@ -1,0 +1,6 @@
+SELECT AVG(energy) FROM songs;
+SELECT AVG(valence) FROM songs;
+SELECT AVG(danceability) FROM songs;
+
+I propose to check repeatability of the song. This will represent better the aura,
+because it really depends on the mood of a person for every play

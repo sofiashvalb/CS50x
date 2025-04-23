@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content = "initial-scale = 1, width = device-width">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Music</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+
+                let correct1 = document.querySelector('.correct1');
+                correct1.addEventListener('click', function() {
+                    correct1.style.backgroundColor = 'green';
+                    document.querySelector('#check1').innerHTML = 'Correct!';
+                });
+
+                let incorrects1 = document.querySelectorAll('.incorrect1');
+                for (let i = 0; i < incorrects1.length; i++){
+                    incorrects1[i].addEventListener('click', function(){
+                        incorrects1[i].style.backgroundColor = 'red';
+                        document.querySelector('#check1').innerHTML = 'Incorrect!';
+                    });
+                }
+
+                let correct2 = document.querySelector('.correct2');
+                correct2.addEventListener('click', function() {
+                    correct2.style.backgroundColor = 'green';
+                    document.querySelector('#check2').innerHTML = 'Correct!';
+                });
+
+                let incorrects2 = document.querySelectorAll('.incorrect2');
+                for (let i = 0; i < incorrects2.length; i++){
+                    incorrects2[i].addEventListener('click', function(){
+                        incorrects2[i].style.backgroundColor = 'red';
+                        document.querySelector('#check2').innerHTML = 'Incorrect!';
+                    });
+                }
+
+                let correct3 = document.querySelector('.correct3');
+                correct3.addEventListener('click', function() {
+                    correct3.style.backgroundColor = 'green';
+                    document.querySelector('#check3').innerHTML = 'Correct!';
+                });
+
+                let incorrects3 = document.querySelectorAll('.incorrect3');
+                for (let i = 0; i < incorrects3.length; i++){
+                    incorrects3[i].addEventListener('click', function(){
+                        incorrects3[i].style.backgroundColor = 'red';
+                        document.querySelector('#check3').innerHTML = 'Incorrect!';
+                    });
+                }
+
+                let correct4 = document.querySelector('.correct4');
+                correct4.addEventListener('click', function() {
+                    correct4.style.backgroundColor = 'green';
+                    document.querySelector('#check4').innerHTML = 'Correct!';
+                });
+
+                let incorrects4 = document.querySelectorAll('.incorrect4');
+                for (let i = 0; i < incorrects4.length; i++){
+                    incorrects4[i].addEventListener('click', function(){
+                        incorrects4[i].style.backgroundColor = 'red';
+                        document.querySelector('#check4').innerHTML = 'Incorrect!';
+                    });
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <h1 class = 'title'>Music</h1>
+        <p>
+            I enjoy many types of music. Here are some examples <br>
+            Can you guess the types?
+        </p>
+        <hr>
+        <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                <dl>
+                    <dt>Taylor Swift: Anti-hero</dt>
+                    <dd>
+                        <button class="correct1">POP</button>
+                        <button class="incorrect1">ROCK</button>
+                        <button class="incorrect1">JAZZ</button>
+                    </dd>
+                </dl>
+                <p id="check1"></p>
+                <hr>
+                <dl>
+                    <dt>Frank Sinatra: Fly me to the moon</dt>
+                    <dd>
+                        <button class="correct2">JAZZ</button>
+                        <button class="incorrect2">ROCK</button>
+                        <button class="incorrect2">METAL</button>
+                    </dd>
+                </dl>
+                <p id="check2"></p>
+                <hr>
+              </div>
+              <div class="col">
+                <dl>
+                    <dt>Tamir Grinberg: Better</dt>
+                    <dd>
+                        <button class="incorrect3">POP</button>
+                        <button class="incorrect3">COUNTRY</button>
+                        <button class="correct3">JAZZ</button>
+                    </dd>
+                </dl>
+                <p id="check3"></p>
+                <hr>
+                <dl>
+                    <dt>Maroon 5: This love</dt>
+                    <dd>
+                        <button class="incorrect4">METAL</button>
+                        <button class="correct4">POP-ROCK</button>
+                        <button class="incorrect4">COUNTRY</button>
+                    </dd>
+                </dl>
+                <p id="check4"></p>
+                <hr>
+              </div>
+            </div>
+          </div>
+          <footer>
+            <button class="back" onclick="document.location='index.html'">Go Back</button>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <h1>Stocks Portfolio</h1>
+    <table class="table table-success table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Symbols</th>
+            <th scope="col">Shares</th>
+            <th scope="col">Price</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for rows in transactions %}
+                <tr>
+                    <td>{{ rows["symbol"] }}</td>
+                    <td>{{ rows["shares"] }}</td>
+                    <td>{{ rows["price"] |float|round(2)|usd }}</td>
+                    <td>{{ (rows["price"] * rows["shares"]) |float|round(2)|usd }}</td>
+                </tr>
+          {% endfor %}
+        </tbody>
+        <tfooter>
+            <tr>
+                <td scope="col"></td>
+                <td>
+                    <form action="/"  method="post">
+                        <div class="mb-3">
+                            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="cash" placeholder="Add money" type="text">
+                        </div>
+                        <button class="btn btn-primary" type="submit">Add</button>
+                    </form>
+                </td>
+                <th scope="col">Cash</th>
+                <td>{{ cash |float|round(2)|usd}}</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <th scope="col">Total Value</th>
+                <th>{{ sum |float|round(2)|usd}}</th>
+            </tr>
+        </tfooter>
+      </table>
+{% endblock %}
+
+
+

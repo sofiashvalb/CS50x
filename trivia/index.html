@@ -1,0 +1,102 @@
+code<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            //This is to make the code load up to bottom and listen the click:
+            document.addEventListener('DOMContentLoaded', function() {
+
+                //if correct-change to green
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function() {
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#check1').innerHTML = 'Correct!';
+                });
+
+                //if incorrect-change to red
+                let incorrects = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrects.length; i++){
+                    incorrects[i].addEventListener('click', function(){
+                        incorrects[i].style.backgroundColor = 'red';
+                        document.querySelector('#check1').innerHTML = 'Incorrect!';
+                    });
+                }
+
+                let correct3 = document.querySelector('.correct3');
+                correct3.addEventListener('click', function() {
+                    correct3.style.backgroundColor = 'green';
+                    document.querySelector('#check3').innerHTML = 'Correct!';
+                });
+
+                //if incorrect-change to red
+                let incorrects3 = document.querySelectorAll('.incorrect3');
+                for (let i = 0; i < incorrects3.length; i++){
+                    incorrects3[i].addEventListener('click', function(){
+                        incorrects3[i].style.backgroundColor = 'red';
+                        document.querySelector('#check3').innerHTML = 'Incorrect!';
+                    });
+                }
+
+                document.querySelector('#check').addEventListener('click', function() {
+                    let input = document.querySelector('input');
+                    if (input.value === 'peeves' || input.value === 'Peeves') {
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#check2').innerHTML = 'Correct!';
+                    }else{
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#check2').innerHTML = 'Incorrect!';
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What Hogwarts house does Harry Potter belongs to?</h3>
+                <button class="correct" type="button">Gryffindor</button>
+                <button class="incorrect" type="button">Slytherin</button>
+                <button class="incorrect" type="button">Ravenclaw</button>
+                <button class="incorrect" type="button">Hufflepuff</button>
+
+                <p id="check1"></p>
+            </div>
+
+            <div class="container">
+                <div class="section">
+                    <h2>Part 1: Multiple Choice </h2>
+                    <hr>
+                    <!-- TODO: Add multiple choice question here -->
+                    <h3>Who was Ron's love interest in 6th year?</h3>
+                    <button class="incorrect3" type="button">Hermaione</button>
+                    <button class="correct3" type="button">Lavender</button>
+                    <button class="incorrect3" type="button">Luna</button>
+                    <button class="incorrect3" type="button">Ginny</button>
+
+                    <p id="check3"></p>
+                </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is the name of the poltergeist that does not appear in the movies?</h3>
+                <input type="text" placeholder="Answer" autocomplete="off">
+                <button id="check" type="submit">Check Answer</button>
+
+                <p id="check2"></p>
+            </div>
+        </div>
+    </body>
+</html>
